@@ -1,1 +1,46 @@
-<h1>Zmilo0o</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmilo0o</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
+    <style>
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            animation: spin 8s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img :src="logoUrl" alt="Company Logo" class="logo">
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            const { createApp } = Vue;
+            createApp({
+                data() {
+                    return {
+                        shopName: 'Zmilo0o',
+                        logoUrl: 'static/logo.png',
+                }
+              }
+            }).mount('#app');
+        });
+    </script>
+</body>
+</html>
