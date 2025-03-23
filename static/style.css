@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kirang Haerang", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 6em;
+}
+.header {
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+}
+.logo-container {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: spin 8s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+.logo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.header h1 {
+    color: #333;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem 0 5rem;
+}
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+}
+.product-card.available {
+    border: 2px solid rgba(93, 213, 156, 0.5);
+    background-color: rgba(93, 213, 156, 0.05);
+}
+.product-card.sold {
+    border: 2px solid rgba(239, 87, 84, 0.5);
+    background-color: rgba(239, 87, 84, 0.05);
+}
+.product-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+}
+.product-card:hover .product-image {
+    filter: blur(3px) brightness(0.7);
+}
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+.product-link {
+    background-color: #06b0b7;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    transition: transform 0.2s ease;
+}
+.product-link:hover {
+    transform: scale(1.1);
+}
+.product-info {
+    padding: 1.5rem;
+}
+.product-name {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 200;
+}
+.product-status {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 2px 10px;
+}
+.status-available {
+    background-color: rgba(93, 213, 156, 0.2);
+    color: #2a9d60;
+}
+.status-sold {
+    background-color: rgba(239, 87, 84, 0.2);
+    color: #c13d3a;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5rem;
+    margin-top: auto;
+    color: #2c3e50;
+}
+footer a {
+    color: #2c3e50;
+    text-decoration: none;
+    margin-right: 20px / 2;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    .product-image {
+        height: 320px;
+    }
+    .logo-container {
+        left: 15px;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+}

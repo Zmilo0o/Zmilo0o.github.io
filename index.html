@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zmilo0o</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js"></script>
-    <style>
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 20px;
-            animation: spin 8s linear infinite;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="app">
-        <img :src="logoUrl" alt="Company Logo" class="logo">
-    </div>
-    <script>
-        window.addEventListener('load', function() {
-            const { createApp } = Vue;
-            createApp({
-                data() {
-                    return {
-                        shopName: 'Zmilo0o',
-                        logoUrl: 'static/logo.png',
-                }
-              }
-            }).mount('#app');
-        });
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zmilo0o Store</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+        <link rel="stylesheet" href="static/style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <header class="header">
+                <div class="logo-container">
+                    <a href="https://www.vinted.sk/member/102890073-michalspano">
+                        <img src="logo.png" alt="Brand Logo" class="logo" />
+                    </a>
+                </div>
+                <h1 class="title">Zmilo0o Store</h1>
+            </header>
+            <main class="container">
+                <div class="product-grid">
+                    <div v-for="product in sortedProducts"
+                            :key="product.id"
+                            :class="['product-card', product.isAvailable ? 'available' : 'sold']"
+                    >
+                        <img :src="product.imageUrl" :alt="product.name" class="product-image" />
+                        <div class="product-overlay">
+                            <a :href="product.link" target="_blank" class="product-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">{{ product.name }}</h3>
+                            <span
+                                :class="['product-status', product.isAvailable ? 'status-available' : 'status-sold']">
+                                {{ product.isAvailable ? 'Available' : 'Sold Out' }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <p>&copy; {{ currentYear }} &bull; Zmilo0o Store &bull;
+                    <a href="TERMS_OF_SERVICE.txt" style="color: #06b0b7;">Terms of Service</a>
+                </p>
+            </footer>
+        </div>
+        <!-- Load products and the Vue app -->
+        <script src="static/products.js"></script>
+        <script src="static/app.js"></script>
+    </body>
 </html>
