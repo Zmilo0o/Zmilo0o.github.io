@@ -30,4 +30,18 @@ const productsData = [
         link: "https://www.vinted.com/items/5755064418-casio-vintage-watch",
         isAvailable: false,
     },
+    {
+        id: 5,
+        name: "Calvin Klein Jeans Jumper",
+        imageUrl: "https://images1.vinted.net/t/04_02173_WHFqERoJVPmQsgMaNDA2nzsj/f800/1738438247.jpeg?s=b354888a6688981cbefa9f6391a239211288068f",
+        link: "https://www.vinted.com/items/5748079018-calvin-klein-jeans-jumper",
+        isAvailable: true
+    },
+    {
+        id: 6,
+        name: "Palace Skateboards Beanie",
+        imageUrl: "https://images1.vinted.net/t/04_015e0_dY11KPsyuVu5iACGw4QbDMRw/f800/1738437592.jpeg?s=f41585ea85d3af87ad0e9c73e2f0e44b5eee8edb",
+        link: "https://www.vinted.com/items/5748027958-palace-skateboards-beanie",
+        isAvailable: true
+    }
 ];
