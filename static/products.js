@@ -14,7 +14,7 @@ const productsData = [
         name: "Vans Authentic Checkerboard Canvas",
         imageUrl: "https://images1.vinted.net/t/01_015a0_mYdW2B4qVt1eMMKcjiw3qYqh/f800/1742729335.jpeg?s=cccf245fdf807be1f782a5f865f7cf850f0bd23c",
         link: "https://www.vinted.com/items/6017808216-vans-authentic-checkerboard-canvas",
-        isAvailable: true,
+        isAvailable: false,
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const productsData = [
         name: "Gosha Rubchinskiy GR-Uniforma Belt",
         imageUrl: "https://images1.vinted.net/t/04_022e6_MrR3duoRxc25qSVQQ9PTPKb4/f800/1738525367.jpeg?s=be49cfa561e8aabd38b8f4e9137aeba57c302eda",
         link: "https://www.vinted.com/items/5755046524-gosha-rubchinskiy-gr-uniforma-belt",
-        isAvailable: true,
+        isAvailable: false,
     },
     {
         id: 5,
