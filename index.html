@@ -20,8 +20,8 @@
             </header>
             <main class="container">
                 <div class="product-grid">
-                    <div v-for="product in sortedProducts"
-                            :key="product.id"
+                    <div v-for="(product, index) in sortedProducts"
+                            :key="index"
                             :class="['product-card', product.isAvailable ? 'available' : 'sold']"
                     >
                         <img :src="product.imageUrl" :alt="product.name" class="product-image" />
