@@ -39,6 +39,12 @@ const productsData = [
         isAvailable: true,
     },
     {
+        name: "Carhartt WIP Nolan Pant Black Stone Washed",
+        imageUrl: "https://images1.vinted.net/t/01_0219c_X4SWFnt65qsqPSWUHmuJgLce/f800/1753643980.jpeg?s=7680d8749a1873737e638c3bd9e815d1ae4e2fec",
+        link: "https://www.vinted.com/items/6762873518-carhartt-wip-nolan-pant-black-stone-washed",
+        isAvailable: true,
+    },
+    {
         name: "Carhartt WIP pants",
         imageUrl: "https://images1.vinted.net/t/04_01c66_Manth95sVGfxNxwc2eaKycST/f800/1738524729.jpeg?s=d3bc634bf9e10edd72d4dce70f4f57618cfac147",
         link: "https://www.vinted.com/items/5754831889-carhartt-wip-pants",
